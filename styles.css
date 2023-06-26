@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*||COLORS||*/
+    --DARK-CYAN:hsl(158, 36%, 37%);
+    --CREAM:hsl(30, 38%, 92%);
+    --VARY-DARK-BLUE:hsl(212, 21%, 14%);
+    --DARK-GRAYISH-BLUE:hsl(228, 12%, 48%);
+    --WHITE:hsl(0, 0%, 100%);
+    
+    /*|| FONTS||*/
+    --P-FONTSIZE:14px;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;   
+    background-color: var(--CREAM);
+}
+.container{
+    display: flex;
+    width:38%;
+    margin: auto;
+    position: relative;
+    top: 220px;  
+    
+}
+.image-section{
+    
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.right-section{
+    padding: 2rem;
+    background-color: var(--WHITE);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+.product-name{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color:var(--DARK-GRAYISH-BLUE);
+    font-weight: 700;
+    font-size: var(--P-FONTSIZE);
+}
+div.title{
+    font-size: 1rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin-top: 1.2rem;
+}
+
+div.paragraph-section{
+    width: 300px;
+    
+    word-break:break-word;
+    margin-top: 1.5rem;
+    color: var(--DARK-GRAYISH-BLUE);
+}
+div.price-tag{
+    display: inline-flex;
+    margin-top: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+div.price-tag>h1{
+    color: var(--DARK-CYAN);
+
+}
+.price-tag>strike{
+    color: var(--DARK-GRAYISH-BLUE);
+margin-left: 3rem;
+align-self: center;
+    
+}
+
+div.button{
+    display: flex;
+    background-color: var(--DARK-CYAN);
+    color: var(--WHITE);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    justify-content: center;
+    font-weight: bolder;
+    
+}
+div.button>span{
+    margin-right: 0.5rem;
+}
+.button:is(:hover,:focus){
+background-color: var(--VARY-DARK-BLUE);
+cursor: pointer;
+}
+
+
+@media screen and (max-width:475px) {
+    .container{
+        display: block;
+        width: 100%;
+        margin: 0px;
+    }
+    div.paragraph-section{
+        width: 100%;
+    }
+    .image-section{
+        border-radius: 10px 10px 0px 0px;
+    }
+}
